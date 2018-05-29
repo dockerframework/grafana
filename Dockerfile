@@ -22,5 +22,15 @@ FROM grafana/grafana:${GRAFANA_VERSION}
 
 MAINTAINER "Laradock Team <mahmoud@zalt.me>"
 
+ENV GF_SERVER_ROOT_URL="http://localhost:3000/grafana" \
+    GF_SECURITY_ADMIN_PASSWORD="password" \
+    GF_INSTALL_PLUGINS="grafana-clock-panel,grafana-simple-json-datasource,grafana-worldmap-panel,alexanderzobnin-zabbix-app"
+
+# AWS Credential for CloudWatch Support:
+# ENV GF_AWS_PROFILES="default" \
+#     GF_AWS_default_ACCESS_KEY_ID="YOUR_ACCESS_KEY" \
+#     GF_AWS_default_SECRET_ACCESS_KEY="YOUR_SECRET_KEY" \
+#     GF_AWS_default_REGION="us-east-1"
+
 EXPOSE 3000
 CMD []
