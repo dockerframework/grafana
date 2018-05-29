@@ -1,0 +1,17 @@
+version: '3.2'
+
+services:
+
+#================================================================================================
+# GRAFANA
+#================================================================================================
+  grafana:
+    restart: always
+    build:
+      context: .
+    ports:
+      - "9100:3000"
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+    environment:
+      - GRAFANA_VERSION=${GRAFANA_VERSION}
