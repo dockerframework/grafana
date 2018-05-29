@@ -22,7 +22,7 @@ FROM grafana/grafana:${GRAFANA_VERSION}
 
 MAINTAINER "Laradock Team <mahmoud@zalt.me>"
 
-ENV GF_SERVER_ROOT_URL="http://localhost:3000/grafana" \
+ENV GF_SERVER_ROOT_URL="http://localhost:3000" \
     GF_SECURITY_ADMIN_PASSWORD="password" \
     GF_INSTALL_PLUGINS="grafana-clock-panel,grafana-simple-json-datasource,grafana-worldmap-panel,alexanderzobnin-zabbix-app"
 
