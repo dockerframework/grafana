@@ -27,11 +27,21 @@ ENV GF_SECURITY_ADMIN_USER="laradock" \
     GF_SECURITY_ADMIN_PASSWORD="password" \
     GF_INSTALL_PLUGINS="alexanderzobnin-zabbix-app,cloudflare-app,crate-datasource,digiapulssi-breadcrumb-panel,grafana-azure-monitor-datasource,grafana-clock-panel,grafana-simple-json-datasource,grafana-kubernetes-app,grafana-worldmap-panel,percona-percona-app,raintank-worldping-app"
 
+ENV DATASOURCES_PATH="/etc/grafana/datasources" \
+    DASHBOARDS_PATH="/etc/grafana/dashboards"
+
 # AWS Credential for CloudWatch Support:
 # ENV GF_AWS_PROFILES="default" \
 #     GF_AWS_default_ACCESS_KEY_ID="YOUR_ACCESS_KEY" \
 #     GF_AWS_default_SECRET_ACCESS_KEY="YOUR_SECRET_KEY" \
 #     GF_AWS_default_REGION="us-east-1"
 
-EXPOSE 3000
+USER root
+RUN mkdir -p /etc/grafana/dashboards \
+    mkdir -p /etc/grafana/datasources
+
+COPY rootfs/ /
+ENTRYPOINT ["/setup.sh"]
 CMD []
+
+EXPOSE 3000
