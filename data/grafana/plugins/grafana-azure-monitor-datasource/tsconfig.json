@@ -1,0 +1,19 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+      "target": "ES5",
+      "module": "system",
+      "sourceMap": true,
+      "declaration": true,
+      "emitDecoratorMetadata": true,
+      "experimentalDecorators": true,
+      "noImplicitAny": false
+  },
+  "files": [
+    "src/**/*",
+    "node_modules/grafana-sdk-mocks/app/headers/common.d.ts"
+  ],
+  "exclude": [
+      "node_modules"
+  ]
+}
