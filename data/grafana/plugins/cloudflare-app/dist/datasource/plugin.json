@@ -1,7 +1,0 @@
-{
-  "type": "datasource",
-  "name": "Cloudflare",
-  "id": "cloudflare-api",
-
-  "metrics": true
-}
