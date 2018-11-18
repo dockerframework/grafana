@@ -15,7 +15,7 @@ services:
       - /etc/localtime:/etc/localtime:ro
       - /data/grafana:/var/lib/grafana
     environment:
-      - GRAFANA_VERSION=5.2.2
+      - GRAFANA_VERSION=5.3.4
       #- GF_SERVER_ROOT_URL=http://localhost:9100
       - GF_SECURITY_ADMIN_USER=laradock
       - GF_SECURITY_ADMIN_PASSWORD=password
