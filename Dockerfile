@@ -24,8 +24,8 @@ MAINTAINER "Laradock Team <mahmoud@zalt.me>"
 
 # ENV GF_SERVER_ROOT_URL="http://localhost:3000"
 ENV GF_SECURITY_ADMIN_USER="laradock" \
-    GF_SECURITY_ADMIN_PASSWORD="password" \
-#   GF_INSTALL_PLUGINS="alexanderzobnin-zabbix-app,cloudflare-app,crate-datasource,digiapulssi-breadcrumb-panel,grafana-azure-monitor-datasource,grafana-clock-panel,grafana-simple-json-datasource,grafana-kubernetes-app,grafana-worldmap-panel,percona-percona-app,raintank-worldping-app"
+    GF_SECURITY_ADMIN_PASSWORD="password"
+# ENV GF_INSTALL_PLUGINS="alexanderzobnin-zabbix-app,cloudflare-app,crate-datasource,digiapulssi-breadcrumb-panel,grafana-azure-monitor-datasource,grafana-clock-panel,grafana-simple-json-datasource,grafana-kubernetes-app,grafana-worldmap-panel,percona-percona-app,raintank-worldping-app"
 
 ENV DATASOURCES_PATH="/etc/grafana/datasources" \
     DASHBOARDS_PATH="/etc/grafana/dashboards"
