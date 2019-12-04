@@ -1,4 +1,4 @@
-ARG GRAFANA_VERSION=5.3.4
+ARG GRAFANA_VERSION=6.3.5
 FROM grafana/grafana:${GRAFANA_VERSION}
 
 # ================================================================================================
